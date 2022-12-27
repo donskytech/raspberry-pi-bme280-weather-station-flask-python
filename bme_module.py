@@ -3,26 +3,6 @@ import bme280
 import time
 import math
 
-# port = 1
-# address = 0x76
-# bus = smbus2.SMBus(port)
-# 
-# calibration_params = bme280.load_calibration_params(bus, address)
-# 
-# # the sample method will take a single reading and return a
-# # compensated_reading object
-# data = bme280.sample(bus, address, calibration_params)
-# 
-# # the compensated_reading class has the following attributes
-# print(data.id)
-# print(data.timestamp)
-# print(data.temperature)
-# print(data.pressure)
-# print(data.humidity)
-# 
-# # there is a handy string representation too
-# print(data)
-
 class BME280Module:
     SEA_LEVEL_PRESSURE_HPA = 1013.25
     PORT = 1
@@ -44,9 +24,3 @@ class BME280Module:
         
         return (temperature_val, pressure_val, humidity_val, altitude_val)
     
-# bme280_module = BME280Module()
-# 
-# 
-# while True:
-#     print(bme280_module.get_sensor_readings())
-#     time.sleep(3)
